@@ -1,0 +1,19 @@
+.container{
+    height: 300px;
+    border: 1em solid blueviolet;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container > div.box{
+    display: flex;
+    flex-grow: 1;
+    max-width: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    font-size: 20px;
+    color: aliceblue;
+}
