@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root{
+    --dark-red: #AC1E1D;
+    --orange: #FF8A00;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,13 +13,29 @@
 
 li,a,button{
     font-family: "Inter", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     color: black;
     text-decoration: none;
 }
 
+h2, p{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
 #navbar{
+    flex-wrap: nowrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000px;
+    background: white;
+}
+
+.navbar-main{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,20 +48,20 @@ li,a,button{
     cursor: pointer;
 }
 
-.navbar-main{
+.navbar-links{
     list-style-type: none;
 }
 
-.navbar-main li{
+.navbar-links li{
     display: inline-block;
     padding: 0px 20px;
 }
 
-.navbar-main li a{
+.navbar-links li a{
     transition: all 0.3s ease 0s;
 }
 
-.navbar-main li a:hover{
+.navbar-links li a:hover{
     color: #AC1E1D;
 }
 
@@ -51,8 +72,54 @@ button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    margin-right: auto;
+    
 }
 
 button:hover{
-    color: #AC1E1D;
+    /* color: #AC1E1D; */
+    color: white;
+    background-color: var(--orange);
+}
+
+
+.container{
+    width: clamp(500px, 100%, 100%);
+
+}
+
+.container.first-entry{
+    margin-top: 6rem;
+}
+
+.white-bg{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20%;
+}
+
+.red-bg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20%;
+    margin-left: 0;
+    background-color: var(--dark-red);
+    color: white;
+}
+
+.content-img{
+    margin: 1rem 3rem;
+}
+
+.text-left-side{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px;
+    height: clamp(400px, auto, 800px);  
 }
